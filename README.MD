@@ -30,6 +30,14 @@ El resultado final supera ampliamente el mínimo requerido.
 
 ---
 
+## 🏆 Resultado Final
+
+Vista renderizada del pingüino generado mediante la API Canvas:
+
+![Resultado Final](./assets/img/resultado.png)
+
+---
+
 ## 🖼 Imagen de Referencia
 
 Se utilizó la siguiente imagen como guía visual inicial:
