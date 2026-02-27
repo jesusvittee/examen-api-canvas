@@ -233,27 +233,13 @@ function drawPenguin(ctx) {
     ctx.rect(centerX - 200 + tamaño + separacion, baseY, tamaño, tamaño);
     ctx.fill(); ctx.stroke();
 
-    ctx.beginPath();
-    ctx.rect(centerX - 200 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
 
 
     // ----- MEDIO (2 cubos) -----
     ctx.beginPath();
     ctx.rect(centerX - 200 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
     ctx.fill(); ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(centerX - 200 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
-
-
-    // ----- ARRIBA (1 cubo) -----
-    ctx.beginPath();
-    ctx.rect(centerX - 200 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
-
-
+  
 
     /* ========= LADO DERECHO ========= */
 
