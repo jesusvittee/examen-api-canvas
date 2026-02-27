@@ -1,0 +1,51 @@
+/* ===== RESET SUAVE ===== */
+body{
+    background: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== MAIN ===== */
+.main-container{
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* ===== SECCION CANVAS ===== */
+.canvas-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-box{
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-text{
+    color: #888;
+    text-align: center;
+}
+
+/* ===== IMAGEN ===== */
+.reference-img{
+    max-height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    padding: 15px;
+    margin-top: auto;
+}

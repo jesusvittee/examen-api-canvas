@@ -3,23 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Leon API canvas</title>
+
+    <title>Pingüino API Canvas</title>
 </head>
 
 <body>
 
-    <nav>
-        <!-- menú -->
+    <!-- ===== NAV ===== -->
+    <nav class="navbar navbar-dark bg-dark shadow">
+        <div class="container text-center text-white">
+            <div>
+                <h4 class="mb-1">Graficación con API Canvas</h4>
+                <p class="mb-0">
+                    Programa: Dibujo de un Pingüino construido mediante
+                    30 figuras usando HTML5 Canvas
+                </p>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <!-- aquí va tu canvas o contenido principal -->
+    <!-- ===== MAIN ===== -->
+    <main class="container-fluid main-container">
+
+        <div class="row h-100 align-items-center">
+
+            <!-- IZQUIERDA (Canvas irá aquí) -->
+            <section class="col-md-6 canvas-section">
+                <div class="canvas-box">
+                    <!-- Aquí después insertaremos tu canvas -->
+                    <p class="placeholder-text">
+                        Aquí aparecerá el Pingüino generado con API Canvas
+                    </p>
+                </div>
+            </section>
+
+            <!-- DERECHA (Imagen referencia) -->
+            <section class="col-md-6 image-section text-center">
+                <img src="./assets/img/imagen.png"
+                     alt="Imagen referencia pingüino"
+                     class="img-fluid reference-img">
+            </section>
+
+        </div>
+
     </main>
 
-    <footer>
-        <!-- pie de página -->
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer bg-dark text-white text-center">
+        <p class="mb-1">Examen de Graficación</p>
+        <p class="mb-0">
+            Jesús Nicolás Vite — Ingeniería en Sistemas Computacionales
+        </p>
     </footer>
 
     <script src="./assets/js/main.js"></script>
