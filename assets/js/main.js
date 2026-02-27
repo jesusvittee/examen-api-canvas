@@ -96,13 +96,6 @@ function drawPenguin(ctx) {
     ctx.closePath();
     ctx.fill();
 
-    ctx.strokeStyle = "#E6A100";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(centerX - 30, centerY - 55);
-    ctx.lineTo(centerX + 30, centerY - 55);
-    ctx.stroke();
-
     // --- 8. SOMBRAS EXTRA ---
     ctx.fillStyle = "rgba(0,0,0,0.1)";
     for (let i = 0; i < 6; i++) {
@@ -111,69 +104,69 @@ function drawPenguin(ctx) {
         ctx.fill();
     }
     // hielitos
-// --- Cubos de hielo GRANDES (2 abajo + 1 arriba por lado) ---
+        // --- Cubos de hielo GRANDES (2 abajo + 1 arriba por lado) ---
 
-ctx.strokeStyle = "#9ED8FF";
-ctx.fillStyle = "rgba(180,220,255,0.4)";
+        ctx.strokeStyle = "#9ED8FF";
+        ctx.fillStyle = "rgba(180,220,255,0.4)";
 
-const tamaño = 36;
-const separacion = 6;
-const subir = tamaño / 3;   // ← subir 1/3 del cubo
-const baseY = centerY + 175 - subir;
-
-
-
-// ===== LADO IZQUIERDO =====
-
-// Abajo izquierda
-ctx.beginPath();
-ctx.rect(centerX - 180, baseY, tamaño, tamaño);
-ctx.fill();
-ctx.stroke();
-
-// Abajo derecha
-ctx.beginPath();
-ctx.rect(centerX - 180 + tamaño + separacion, baseY, tamaño, tamaño);
-ctx.fill();
-ctx.stroke();
-
-// Arriba (conectado)
-ctx.beginPath();
-ctx.rect(
-    centerX - 180 + (tamaño + separacion) / 2,
-    baseY - tamaño,
-    tamaño,
-    tamaño
-);
-ctx.fill();
-ctx.stroke();
+        const tamaño = 36;
+        const separacion = 6;
+        const subir = tamaño / 3;   // subir 1/3 del cubo
+        const baseY = centerY + 175 - subir;
 
 
 
-// ===== LADO DERECHO =====
+        // ===== LADO IZQUIERDO =====
 
-// Abajo izquierda
-ctx.beginPath();
-ctx.rect(centerX + 100, baseY, tamaño, tamaño);
-ctx.fill();
-ctx.stroke();
+        // Abajo izquierda
+        ctx.beginPath();
+        ctx.rect(centerX - 180, baseY, tamaño, tamaño);
+        ctx.fill();
+        ctx.stroke();
 
-// Abajo derecha
-ctx.beginPath();
-ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
-ctx.fill();
-ctx.stroke();
+        // Abajo derecha
+        ctx.beginPath();
+        ctx.rect(centerX - 180 + tamaño + separacion, baseY, tamaño, tamaño);
+        ctx.fill();
+        ctx.stroke();
 
-// Arriba (conectado)
-ctx.beginPath();
-ctx.rect(
-    centerX + 100 + (tamaño + separacion) / 2,
-    baseY - tamaño,
-    tamaño,
-    tamaño
-);
-ctx.fill();
-ctx.stroke();
+        // Arriba (conectado)
+        ctx.beginPath();
+        ctx.rect(
+            centerX - 180 + (tamaño + separacion) / 2,
+            baseY - tamaño,
+            tamaño,
+            tamaño
+        );
+        ctx.fill();
+        ctx.stroke();
+
+
+
+        // ===== LADO DERECHO =====
+
+        // Abajo izquierda
+        ctx.beginPath();
+        ctx.rect(centerX + 100, baseY, tamaño, tamaño);
+        ctx.fill();
+        ctx.stroke();
+
+        // Abajo derecha
+        ctx.beginPath();
+        ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
+        ctx.fill();
+        ctx.stroke();
+
+        // Arriba (conectado)
+        ctx.beginPath();
+        ctx.rect(
+            centerX + 100 + (tamaño + separacion) / 2,
+            baseY - tamaño,
+            tamaño,
+            tamaño
+        );
+        ctx.fill();
+        ctx.stroke();
 }
 
 
