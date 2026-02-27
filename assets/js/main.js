@@ -110,6 +110,45 @@ function drawPenguin(ctx) {
         ctx.ellipse(centerX - 75 + (i * 30), centerY + 185, 10, 5, 0, 0, Math.PI * 2);
         ctx.fill();
     }
+    // hielitos
+// --- Cubos de hielo ---
+
+ctx.strokeStyle = "#9ED8FF";
+ctx.fillStyle = "rgba(180,220,255,0.4)";
+const tamaño = 22;
+
+// ===== LADO IZQUIERDO =====
+ctx.beginPath();
+ctx.rect(centerX - 180, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX - 150, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX - 120, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
+
+
+// ===== LADO DERECHO =====
+ctx.beginPath();
+ctx.rect(centerX + 100, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX + 130, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX + 160, centerY + 175, tamaño, tamaño);
+ctx.fill();
+ctx.stroke();
 }
 
 
