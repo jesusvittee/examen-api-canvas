@@ -160,14 +160,47 @@ function drawPenguin(ctx) {
     /* =====================================================
        7. PICO
     ===================================================== */
-    ctx.fillStyle = "#FFD700";
+  ctx.fillStyle = "#FFD700";
+
+    /* ---- Pico superior ---- */
     ctx.beginPath();
-    ctx.moveTo(centerX - 35, centerY - 70);
-    ctx.lineTo(centerX + 35, centerY - 70);
-    ctx.lineTo(centerX, centerY - 10);
+    ctx.moveTo(centerX - 30, centerY - 40); // esquina izquierda abajo
+    ctx.lineTo(centerX + 30, centerY - 40); // esquina derecha abajo
+    ctx.lineTo(centerX, centerY - 65);     // punta arriba
     ctx.closePath();
     ctx.fill();
+
+    /* ---- Pico inferior ---- */
+    ctx.beginPath();
+    ctx.moveTo(centerX - 30, centerY - 40);
+    ctx.lineTo(centerX + 30, centerY - 40);
+    ctx.lineTo(centerX, centerY - 15); // misma punta original
+    ctx.closePath();
+    ctx.fill();
+     
     /* =====================================================
+       7. PICO - interior
+    ===================================================== */
+
+    ctx.fillStyle = "#ff3300";
+    /* ---- Pico superior interior  ---- */
+    ctx.beginPath();
+    ctx.moveTo(centerX - 20, centerY - 40); // esquina izquierda abajo
+    ctx.lineTo(centerX + 20, centerY - 40); // esquina derecha abajo
+    ctx.lineTo(centerX, centerY - 45);     // punta arriba
+    ctx.closePath();
+    ctx.fill();
+
+    /* ---- Pico inferior interior ---- */
+    ctx.beginPath();
+    ctx.moveTo(centerX - 20, centerY - 40);
+    ctx.lineTo(centerX + 20, centerY - 40);
+    ctx.lineTo(centerX, centerY - 35); // misma punta original
+    ctx.closePath();
+    ctx.fill();
+
+
+/* =====================================================
        8. SOMBRAS
     ===================================================== */
     ctx.fillStyle = "rgba(0,0,0,0.1)";
@@ -179,79 +212,79 @@ function drawPenguin(ctx) {
 
   /* =====================================================
    9. CUBOS DE HIELO (3 base + 2 medio + 1 arriba)
-===================================================== */
-ctx.strokeStyle = "#9ED8FF";
-ctx.fillStyle = "rgba(180,220,255,0.4)";
+    ===================================================== */
+    ctx.strokeStyle = "#9ED8FF";
+    ctx.fillStyle = "rgba(180,220,255,0.4)";
 
-const tamaño = 36;
-const separacion = 6;
-const subir = tamaño / 3;
-const baseY = centerY + 175 - subir;
-
-
-/* ========= LADO IZQUIERDO ========= */
-
-// ----- BASE (3 cubos) -----
-ctx.beginPath();
-ctx.rect(centerX - 200, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
-
-ctx.beginPath();
-ctx.rect(centerX - 200 + tamaño + separacion, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
-
-ctx.beginPath();
-ctx.rect(centerX - 200 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    const tamaño = 36;
+    const separacion = 6;
+    const subir = tamaño / 3;
+    const baseY = centerY + 175 - subir;
 
 
-// ----- MEDIO (2 cubos) -----
-ctx.beginPath();
-ctx.rect(centerX - 200 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    /* ========= LADO IZQUIERDO ========= */
 
-ctx.beginPath();
-ctx.rect(centerX - 200 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    // ----- BASE (3 cubos) -----
+    ctx.beginPath();
+    ctx.rect(centerX - 200, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 
+    ctx.beginPath();
+    ctx.rect(centerX - 200 + tamaño + separacion, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 
-// ----- ARRIBA (1 cubo) -----
-ctx.beginPath();
-ctx.rect(centerX - 200 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
-
-
-
-/* ========= LADO DERECHO ========= */
-
-// ----- BASE (3 cubos) -----
-ctx.beginPath();
-ctx.rect(centerX + 100, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
-
-ctx.beginPath();
-ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
-
-ctx.beginPath();
-ctx.rect(centerX + 100 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(centerX - 200 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 
 
-// ----- MEDIO (2 cubos) -----
-ctx.beginPath();
-ctx.rect(centerX + 100 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    // ----- MEDIO (2 cubos) -----
+    ctx.beginPath();
+    ctx.rect(centerX - 200 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 
-ctx.beginPath();
-ctx.rect(centerX + 100 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(centerX - 200 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 
 
-// ----- ARRIBA (1 cubo) -----
-ctx.beginPath();
-ctx.rect(centerX + 100 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
-ctx.fill(); ctx.stroke();
+    // ----- ARRIBA (1 cubo) -----
+    ctx.beginPath();
+    ctx.rect(centerX - 200 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+
+
+    /* ========= LADO DERECHO ========= */
+
+    // ----- BASE (3 cubos) -----
+    ctx.beginPath();
+    ctx.rect(centerX + 100, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(centerX + 100 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+
+    // ----- MEDIO (2 cubos) -----
+    ctx.beginPath();
+    ctx.rect(centerX + 100 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(centerX + 100 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
+
+
+    // ----- ARRIBA (1 cubo) -----
+    ctx.beginPath();
+    ctx.rect(centerX + 100 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
+    ctx.fill(); ctx.stroke();
 }
 
 
