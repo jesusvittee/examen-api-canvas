@@ -147,42 +147,81 @@ function drawPenguin(ctx) {
         ctx.fill();
     }
 
-    /* =====================================================
-       9. CUBOS DE HIELO
-    ===================================================== */
-    ctx.strokeStyle = "#9ED8FF";
-    ctx.fillStyle = "rgba(180,220,255,0.4)";
+  /* =====================================================
+   9. CUBOS DE HIELO (3 base + 2 medio + 1 arriba)
+===================================================== */
+ctx.strokeStyle = "#9ED8FF";
+ctx.fillStyle = "rgba(180,220,255,0.4)";
 
-    const tamaño = 36;
-    const separacion = 6;
-    const subir = tamaño / 3;
-    const baseY = centerY + 175 - subir;
+const tamaño = 36;
+const separacion = 6;
+const subir = tamaño / 3;
+const baseY = centerY + 175 - subir;
 
-    // Lado izquierdo
-    ctx.beginPath();
-    ctx.rect(centerX - 180, baseY, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
 
-    ctx.beginPath();
-    ctx.rect(centerX - 180 + tamaño + separacion, baseY, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
+/* ========= LADO IZQUIERDO ========= */
 
-    ctx.beginPath();
-    ctx.rect(centerX - 180 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
+// ----- BASE (3 cubos) -----
+ctx.beginPath();
+ctx.rect(centerX - 200, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
 
-    // Lado derecho
-    ctx.beginPath();
-    ctx.rect(centerX + 100, baseY, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
+ctx.beginPath();
+ctx.rect(centerX - 200 + tamaño + separacion, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
 
-    ctx.beginPath();
-    ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
+ctx.beginPath();
+ctx.rect(centerX - 200 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
 
-    ctx.beginPath();
-    ctx.rect(centerX + 100 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
-    ctx.fill(); ctx.stroke();
+
+// ----- MEDIO (2 cubos) -----
+ctx.beginPath();
+ctx.rect(centerX - 200 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX - 200 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+
+// ----- ARRIBA (1 cubo) -----
+ctx.beginPath();
+ctx.rect(centerX - 200 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+
+
+/* ========= LADO DERECHO ========= */
+
+// ----- BASE (3 cubos) -----
+ctx.beginPath();
+ctx.rect(centerX + 100, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX + 100 + tamaño + separacion, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX + 100 + (tamaño + separacion)*2, baseY, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+
+// ----- MEDIO (2 cubos) -----
+ctx.beginPath();
+ctx.rect(centerX + 100 + (tamaño + separacion)/2, baseY - tamaño, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+ctx.beginPath();
+ctx.rect(centerX + 100 + (tamaño + separacion)*1.5, baseY - tamaño, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
+
+
+// ----- ARRIBA (1 cubo) -----
+ctx.beginPath();
+ctx.rect(centerX + 100 + (tamaño + separacion), baseY - tamaño*2, tamaño, tamaño);
+ctx.fill(); ctx.stroke();
 }
 
 
