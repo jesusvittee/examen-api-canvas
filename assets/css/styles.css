@@ -48,4 +48,28 @@ body{
 .footer{
     padding: 15px;
     margin-top: auto;
+
+    /* NUEVO */
+    display: flex;
+    flex-direction: row;        /* horizontal */
+    justify-content: center;    /* centra horizontal */
+    align-items: center;        /* centra vertical */
+    gap: 40px;                  /* espacio entre elementos */
+    text-align: center;         /* centra textos */
+    flex-wrap: wrap;            /* evita que se rompa en pantallas pequeñas */
+}
+
+/* centra contenido interno */
+.footer div,
+.footer nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* títulos y textos centrados */
+.footer h4,
+.footer p{
+    margin: 5px 0;
+    text-align: center;
 }
