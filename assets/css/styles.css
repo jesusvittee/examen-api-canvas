@@ -1,17 +1,33 @@
-/* ===== RESET SUAVE ===== */
+/* ===== BLOQUEO DE ALTURA GLOBAL ===== */
+html, body{
+    height: 100%;
+    overflow: hidden; /* evita que la página crezca más que la pantalla */
+}
+
+
+/* ===== BODY ===== */
 body{
     background: #f4f6f9;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* ===== MAIN ===== */
 .main-container{
     flex: 1;
     padding: 40px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto; /* scroll SOLO aquí si hace falta */
 }
+
 
 /* ===== SECCION CANVAS ===== */
 .canvas-section{
@@ -20,29 +36,40 @@ body{
     align-items: center;
 }
 
+
+/* ===== CAJA CANVAS ===== */
 .canvas-box{
-    width: 100%;
-    max-width: 500px;
-    height: 500px;
+    width: min(500px, 90vw);
+    height: min(500px, 65vh);
+
     background: white;
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+/* ===== TEXTO PLACEHOLDER ===== */
 .placeholder-text{
     color: #888;
     text-align: center;
 }
 
-/* ===== IMAGEN ===== */
+
+/* ===== IMAGEN REFERENCIA ===== */
 .reference-img{
-    max-height: 500px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 65vh;
+    object-fit: contain;
+
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
 }
+
 
 /* ===== FOOTER ===== */
 .footer{
