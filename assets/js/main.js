@@ -126,6 +126,37 @@ function drawPenguin(ctx) {
     ctx.arc(centerX + eyeDist - 5, eyeY - 5, 4, 0, Math.PI * 2);
     ctx.fill();
 
+
+    /* =====================================================
+    MOÑO DEL PINGÜINO (unido desde el centro)
+    ===================================================== */
+
+    const bowY = centerY - 5;
+
+    // ----- TRIÁNGULO IZQUIERDO -----
+    ctx.fillStyle = "#e53935";
+    ctx.beginPath();
+    ctx.moveTo(centerX - 50, bowY - 22); // esquina superior
+    ctx.lineTo(centerX, bowY);            // punta EXACTA al centro
+    ctx.lineTo(centerX - 50, bowY + 22); // esquina inferior
+    ctx.closePath();
+    ctx.fill();
+
+
+    // ----- TRIÁNGULO DERECHO -----
+    ctx.beginPath();
+    ctx.moveTo(centerX + 50, bowY - 22);
+    ctx.lineTo(centerX, bowY);            // misma conexión central
+    ctx.lineTo(centerX + 50, bowY + 22);
+    ctx.closePath();
+    ctx.fill();
+
+
+    // ----- CÍRCULO CENTRAL (une todo) -----
+    ctx.fillStyle = "#c62828";
+    ctx.beginPath();
+    ctx.arc(centerX, bowY, 14, 0, Math.PI * 2);
+    ctx.fill();
     /* =====================================================
        7. PICO
     ===================================================== */
@@ -136,7 +167,6 @@ function drawPenguin(ctx) {
     ctx.lineTo(centerX, centerY - 10);
     ctx.closePath();
     ctx.fill();
-
     /* =====================================================
        8. SOMBRAS
     ===================================================== */
