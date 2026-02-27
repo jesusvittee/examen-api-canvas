@@ -126,15 +126,7 @@ Estas herramientas fueron utilizadas como soporte académico y no como sustituci
 ---
 
 ## 🏗 Estructura del Proyecto
-│
-├── index.html
-├── assets
-│ ├── css
-│ │ └── styles.css
-│ ├── js
-│ │ └── main.js
-│ └── img
-│ └── imagen.png
+![Imagen de referencia](./assets/img/estructura.png)
 
 ---
 
