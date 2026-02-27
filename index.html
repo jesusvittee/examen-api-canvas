@@ -18,16 +18,23 @@
 
 <body>
 
-    <!-- ===== NAV ===== -->
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-dark bg-dark shadow">
-        <div class="container text-center text-white">
-            <div>
-                <h4 class="mb-1">Graficación con API Canvas</h4>
-                <p class="mb-0">
-                    Programa: Dibujo de un Pingüino construido mediante
-                    30 figuras usando HTML5 Canvas
-                </p>
-            </div>
+        <div class="container text-center text-white flex-column">
+
+            <h4 class="mb-1">
+                Examen — Tema 1: Introducción a la Graficación por Computadora
+            </h4>
+
+            <p class="mb-0">
+                Graficación | Pingüino geométrico con API Canvas (HTML5 + JavaScript)
+            </p>
+
+            <small class="mt-1">
+                Alumno: Jesús Nicolás Vite — No. Control: 241064039 <br>
+                Docente: M.C. Pinedo Fernández Víctor Manuel
+            </small>
+
         </div>
     </nav>
 
@@ -36,15 +43,14 @@
 
         <div class="row h-100 align-items-center">
 
-            <!-- IZQUIERDA (Canvas irá aquí) -->
+            <!-- CANVAS -->
             <section class="col-md-6 canvas-section">
                 <div class="canvas-box">
-                    <!-- Aquí después insertaremos tu canvas -->
-                 <canvas id="canvas" width="500" height="500"></canvas>
+                    <canvas id="canvas" width="500" height="500"></canvas>
                 </div>
             </section>
 
-            <!-- DERECHA (Imagen referencia) -->
+            <!-- IMAGEN REFERENCIA -->
             <section class="col-md-6 image-section text-center">
                 <img src="./assets/img/imagen.png"
                      alt="Imagen referencia pingüino"
@@ -56,16 +62,16 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer bg-dark text-white text-center">
-        <p class="mb-1">Examen de Graficación</p>
-        <p class="mb-1">
-            Jesús Nicolás Vite
-        </p>
-           <p class="mb-1">
-            Num Control: 241064039
-        </p>
+    <footer class="footer bg-dark text-white">
+
+        <div>
+            <p class="mb-1">Ingeniería en Sistemas Computacionales</p>
+            <p class="mb-0">© 2026 — Examen de Graficación</p>
+        </div>
+
     </footer>
 
+    <!-- JS -->
     <script src="./assets/js/main.js"></script>
 
 </body>
